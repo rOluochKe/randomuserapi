@@ -120,6 +120,8 @@ Sort
 
   .search-form, .filter-data {
     width: 90vw;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 

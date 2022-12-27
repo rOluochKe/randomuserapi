@@ -32,13 +32,13 @@ const EditUserModal = ({ children, id }) => {
           state: userState,
           country: userCountry,
         }
-  
+
         return {
           ...userDetail,
           name: nameOutput,
-          email: userEmail, 
-          phone: userPhone, 
           location: locationOutput,
+          phone: userPhone,
+          email: userEmail, 
         };
       }
       return  {
