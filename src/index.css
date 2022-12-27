@@ -1,13 +1,335 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  /* primary/main color */
+  --clr-primary-5: hsl(205, 78%, 60%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-green-success: rgb(0, 100, 0);
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 750px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*
+=============== 
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+/*
+=============== 
+Header
+===============
+*/
+
+.filter-header {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+=============== 
+Search
+===============
+*/
+.search-form, .filter-data {
+  width: 45vw;
+  max-width: 569px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid var(--clr-grey-8);
+  max-width: 569px;
+  background: transparent;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--clr-grey-3);
+  letter-spacing: var(--spacing);
+  margin-top: 1rem;
+}
+
+/*
+=============== 
+Sort
+===============
+*/
+.filter-data {
+  width: 45vw;
+}
+
+@media screen and (max-width: 992px) {
+  .filter-header {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .search-form, .filter-data {
+    width: 90vw;
+  }
+}
+
+/*
+=============== 
+Buttons
+===============
+*/
+.btn, .goback {
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-primary-5);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+
+.btn:hover, .goback:hover {
+  color: var(--clr-primary-5);
+  background: var(--clr-primary-1);
+  border-color: var(--clr-primary-1);
+}
+
+.goback {
+  background: var(--clr-grey-1);
+  border: none;
+}
+  
+/*
+=============== 
+Spinner
+===============
+*/
+.spinner-container {
+  position: relative;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: var(--clr-primary-5);
+  animation: spinner 0.6s linear infinite;
+}
+
+/*
+=============== 
+User
+===============
+*/
+.users {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  display: grid;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .users {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.user {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  padding: 1rem 2rem;
+}
+
+.container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container img {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  border-radius: 50%;
+  padding: 5px;
+  background: var(--clr-white);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
+  box-shadow: var(--dark-shadow);
+}
+
+.values-list {
+  display: block;
+}
+
+.icon-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.user-info {
+  margin-top: -4px;
+}
+
+.icon {
+  background: transparent;
+  border: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--clr-grey-5);
+  transition: var(--transition);
+}
+
+.icon:hover {
+  color: var(--clr-primary-5);
+}
+
+.single-user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*
+=============== 
+Modal
+===============
+*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
+}
+
+/* OPEN/CLOSE MODAL */
+.show-modal {
+  opacity: 1;
+  z-index: 999;
+}
+
+.modal-container {
+  background: var(--clr-white);
+  width: 90vw;
+  max-width: var(--fixed-width);
+  padding: 1.4rem;
+  border-radius: var(--radius);
+  text-align: left;
+  position: relative;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-red-dark);
+  cursor: pointer;
+}
+
+/*
+=============== 
+Form
+===============
+*/
+.edit-form-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.first-column, .second-column {
+  width: 50%;
+}
+
+.edit-btn {
+  margin-top: 1.5rem;
+}
+
+.success {
+  color: var(--clr-white);
+  background: var(--clr-green-success);
+  padding: 0.5rem;
 }
