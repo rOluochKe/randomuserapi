@@ -2,13 +2,13 @@
 
 Dealing with a nested api endpoint to retrieve users information, save it on localStorage and show the response as a grid of cards.
 
-![sample](images/image-one.png)
+![image-one](images/image-one.png)
 _________________________________________
 
-![sample](images/image-two.png)
+![image-two](images/image-two.png)
 _________________________________________
 
-![sample](images/image-three.png)
+![image-three](images/image-three.png)
 
 - [Functionalities](#functionalities)
 - [Technologies](#technologies)
