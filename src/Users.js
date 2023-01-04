@@ -34,7 +34,7 @@ const Users = () => {
             ))
           .map((user) => {
             return (
-              <article className='user' key={user.login.uuid}>
+              <article className='user' key={user.login.uuid} data-testid="users-list">
                 <UserData index={user.login.uuid} user={user} />
               </article>
             )

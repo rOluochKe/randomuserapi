@@ -2,13 +2,19 @@
 
 Dealing with a nested api endpoint to retrieve users information, save it on localStorage and show the response as a grid of cards.
 
-![image-one](images/image-one.png)
-_________________________________________
+<p align="center">
+  <img src="images/image-one.png" width="800" title="image one">
+</p>
+__________________________________________________________________________________________________________________________________
 
-![image-two](images/image-two.png)
-_________________________________________
+<p align="center">
+  <img src="images/image-two.png" width="800" title="image two">
+</p>
+__________________________________________________________________________________________________________________________________
 
-![image-three](images/image-three.png)
+<p align="center">
+  <img src="images/image-three.png" width="800" title="image three">
+</p>
 
 - [Functionalities](#functionalities)
 - [Technologies](#technologies)
@@ -65,12 +71,13 @@ npm start
 ```
 
 <a id="license"></a>
+
 ### License
 
 This software is open source, licensed under the [MIT License.](LICENSE)
 
-
 <a id="contributing"></a>
+
 ### Contributing
 
 1. Fork it (git clone git@github.com:rOluochKe/randomuserapi.git/fork)
