@@ -5,10 +5,10 @@ Dealing with a nested api endpoint to retrieve users information, save it on loc
 <p align="center">
   <img src="/screenshots/image-one.png" width="800" title="image one">
 </p>
-__________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________
 
 <p align="center">
-  <img src="screenshots/image-two.png" width="800" title="image two">
+  ![ScreenShot](/screenshots/image-two.png)
 </p>
 __________________________________________________________________________________________________________________________________
 
