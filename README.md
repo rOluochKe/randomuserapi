@@ -3,7 +3,7 @@
 Dealing with a nested api endpoint to retrieve users information, save it on localStorage and show the response as a grid of cards.
 
 <p align="center">
-  <img src="screenshots/image-one.png" width="800" title="image one">
+  <img src="./screenshots/image-one.png" width="800" title="image one">
 </p>
 __________________________________________________________________________________________________________________________________
 
