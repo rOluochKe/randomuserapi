@@ -7,7 +7,7 @@ Dealing with a nested api endpoint to retrieve users information, save it on loc
 </p>
 ____________________________________________________________________________________________________________________________
 
-  ![image-two](/screenshots/image-two.png)
+  <img align="center" src="screenshots/image-two.png" width="800"> ![](screenshots/image-two.png)
 __________________________________________________________________________________________________________________________________
 
 <p align="center">
