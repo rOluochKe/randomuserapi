@@ -5,12 +5,10 @@ Dealing with a nested api endpoint to retrieve users information, save it on loc
 <p align="center">
   <img src="screenshots/image-one.PNG" width="800" />
 </p>
-________________________________________________________________________________________________________________________
 
 <p align="center">
   <img src="screenshots/image-two.PNG" width="800" />
 </p>
-________________________________________________________________________________________________________________________
 
 <p align="center">
   <img src="screenshots/image-three.PNG" width="800" />
