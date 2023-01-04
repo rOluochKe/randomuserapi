@@ -7,7 +7,7 @@ Dealing with a nested api endpoint to retrieve users information, save it on loc
 </p>
 __________________________________________________________________________________________________________________________________
 
-  <img align="center" src="screenshots/image-two.png" width="800" />
+  <img align="center" src="screenshots/image-two.PNG" width="800" />
 __________________________________________________________________________________________________________________________________
 
 <p align="center">
